@@ -2,6 +2,9 @@ pipeline{
     agent{
         label "node"
     }
+    triggers {
+        githubPush()
+    } 
     stages{
         stage("A"){
             steps{
